@@ -299,7 +299,7 @@ extern "C" {
 		ISelectionItemProvider *pSelectionPattern ;
 		HRESULT hr = pElement->GetCurrentPattern(UIA_SelectionItemPatternId, (IUnknown**)&pSelectionPattern) ;
 		if (FAILED(hr)) {
-			printf("RA_GetIsSelected: getCurrentPattern failed 0x%x\r\n") ;
+			printf("RA_Select: getCurrentPattern failed 0x%x\r\n") ;
 			return FALSE ;
 		}
 
