@@ -70,9 +70,9 @@
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
-                <CheckBox Content="CheckBox" Height="16" HorizontalAlignment="Left"  Name="checkBox" VerticalAlignment="Center" />
-                <Label Content="Label" Height="28" HorizontalAlignment="Left" Name="checkBoxLable" VerticalAlignment="Center" Grid.Column="1" />
-                <CheckBox Content="CheckBox" Height="16" HorizontalAlignment="Left" Name="checkBoxDisabled" VerticalAlignment="Center" Grid.Column="2" />
+                <CheckBox Content="checkBox" Height="16" HorizontalAlignment="Left"  Name="checkBox" VerticalAlignment="Center" />
+                <Label Content="checkBox is off" Height="28" HorizontalAlignment="Left" Name="checkBoxLable" VerticalAlignment="Center" Grid.Column="1" />
+                <CheckBox Content="checkBoxDisabled" Height="16" HorizontalAlignment="Left" Name="checkBoxDisabled" VerticalAlignment="Center" Grid.Column="2" />
             </Grid>
         </Grid>
         <StackPanel Height="288" Name="stackPanel2" VerticalAlignment="Top" Width="200" Margin="474,73,12,0">
