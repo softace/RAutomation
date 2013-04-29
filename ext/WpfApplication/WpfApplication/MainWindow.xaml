@@ -3,90 +3,112 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="456" Width="708">
     <Grid>
-        <StackPanel Height="Auto" HorizontalAlignment="Left" Margin="23,24,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="Auto">
-            <Button Content="About" Height="23" Name="aboutButton" Width="Auto" Margin="3" />
-            <Button Content="Data Entry Form" Height="23" Name="nextFormButton" Width="Auto" Margin="3" />
-            <Button Content="Simple Elements" Height="23" Name="buttonButon" Width="Auto" Margin="3" />
-            <Button Content="Close" Height="23" Name="closeButton" Width="Auto" Margin="3" />
-        </StackPanel>
-        <Grid Height="378" HorizontalAlignment="Left" Margin="148,27,0,0" Name="grid1" VerticalAlignment="Top" Width="311">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Assorted UI Elements" HorizontalAlignment="Left"  Name="label2" VerticalAlignment="Top" />
-            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="This is a sample text" HorizontalAlignment="Left"  Name="label1" VerticalAlignment="Top" />
-            <TextBox Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Name="textField" VerticalAlignment="Top"/>
-            <TextBox Grid.Row="2"  Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch"  Name="textBoxDisabled" VerticalAlignment="Top"  />
-            <GroupBox Grid.Row="4" Grid.ColumnSpan="2" Header="Group of radio buttons" HorizontalAlignment="Stretch" Name="groupBox1" VerticalAlignment="Top">
-                <Grid Margin="3" Height="auto">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <RadioButton Grid.Column="0" Content="Option 1" Height="Auto" HorizontalAlignment="Left" Name="radioButton1" />
-                    <RadioButton Grid.Column="1" Content="Option 2" Height="Auto" HorizontalAlignment="Left" Name="radioButton2" />
-                    <RadioButton Grid.Column="2" Content="Option Disabled" Height="Auto" HorizontalAlignment="Left" Name="radioButton3" />
-                    <Label Content="No option selected" Grid.Row="1" Height="Auto" Name="radioButtonLabel" Grid.ColumnSpan="4" />
-                    <Button Content="Reset" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Name="radioResetButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                </Grid>
-            </GroupBox>
-            <GroupBox Grid.Row="5" Grid.ColumnSpan="2" Header="Drop down list" HorizontalAlignment="Stretch" Name="groupBox2" VerticalAlignment="Top">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="1*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Name="FruitsComboBox" VerticalAlignment="Top" />
-                    <Label Grid.Row="0" Grid.Column="1" Content="label2" HorizontalAlignment="Left" Name="fruitsLabel" VerticalAlignment="Top" />
-                    <ComboBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Name="comboBoxDisabled" VerticalAlignment="Top" IsEnabled="False" />
-                </Grid>
-            </GroupBox>
-            <TextBox Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Name="multiLineTextField" VerticalAlignment="Stretch" />
-            <Grid  Grid.Row="3" HorizontalAlignment="Stretch"  Name="grid2" VerticalAlignment="Top"  Grid.ColumnSpan="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu IsMainMenu="True" Grid.Row="0" Height="23" HorizontalAlignment="left" Name="fileMenu" VerticalAlignment="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_About" />
+                <MenuItem Header="Roundabout Way">
+                    <MenuItem Header="To">
+                        <MenuItem Header="_About" />
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" Name="stackPanel3" VerticalAlignment="Stretch" Orientation="Horizontal">
+            <StackPanel Height="Auto" Name="stackPanel1" Width="Auto">
+                <Button Content="About" Height="23" Name="aboutButton" Width="Auto" Margin="3" />
+                <Button Content="Data Entry Form" Height="23" Name="nextFormButton" Width="Auto" Margin="3" />
+                <Button Content="Simple Elements" Height="23" Name="buttonButon" Width="Auto" Margin="3" />
+                <Button Content="Close" Height="23" Name="closeButton" Width="Auto" Margin="3" />
+            </StackPanel>
+            <Grid Name="grid1">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <CheckBox Content="checkBox" Height="16" HorizontalAlignment="Left"  Name="checkBox" VerticalAlignment="Center" />
-                <Label Content="checkBox is off" Height="28" HorizontalAlignment="Left" Name="checkBoxLable" VerticalAlignment="Center" Grid.Column="1" />
-                <CheckBox Content="checkBoxDisabled" Height="16" HorizontalAlignment="Left" Name="checkBoxDisabled" VerticalAlignment="Center" Grid.Column="2" />
+                <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Assorted UI Elements" HorizontalAlignment="Left" Name="label2" VerticalAlignment="Top" />
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="This is a sample text" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" />
+                <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Name="textField" VerticalAlignment="Top" />
+                <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" Name="textBoxDisabled" VerticalAlignment="Top" IsEnabled="False" />
+                <GroupBox Grid.Row="4" Grid.ColumnSpan="2" Header="Group of radio buttons" HorizontalAlignment="Stretch" Name="groupBox1" VerticalAlignment="Top">
+                    <Grid Margin="3" Height="auto">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Column="0" Content="Option 1" Height="Auto" HorizontalAlignment="Left" Name="radioButton1" />
+                        <RadioButton Grid.Column="1" Content="Option 2" Height="Auto" HorizontalAlignment="Left" Name="radioButton2" />
+                        <RadioButton Grid.Column="2" Content="Option Disabled" Height="Auto" HorizontalAlignment="Left" Name="radioButton3" IsEnabled="False" />
+                        <Label Content="No option selected" Grid.Row="1" Height="Auto" Name="radioButtonLabel" Grid.ColumnSpan="4" />
+                        <Button Content="Reset" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Name="radioResetButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="5" Grid.ColumnSpan="2" Header="Drop down list" HorizontalAlignment="Stretch" Name="groupBox2" VerticalAlignment="Top">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" Name="FruitsComboBox" VerticalAlignment="Top" />
+                        <Label Grid.Row="0" Grid.Column="1" Content="label2" HorizontalAlignment="Left" Name="fruitsLabel" VerticalAlignment="Top" />
+                        <ComboBox Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Name="comboBoxDisabled" VerticalAlignment="Top" IsEnabled="False" />
+                    </Grid>
+                </GroupBox>
+                <TextBox Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Name="multiLineTextField" VerticalAlignment="Stretch" />
+                <Grid Grid.Row="3" HorizontalAlignment="Stretch" Name="grid2" VerticalAlignment="Top" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Content="checkBox" Height="16" HorizontalAlignment="Left" Name="checkBox" VerticalAlignment="Center" />
+                    <Label Content="checkBox is off" Height="28" HorizontalAlignment="Left" Name="checkBoxLable" VerticalAlignment="Center" Grid.Column="1" />
+                    <CheckBox Content="checkBoxDisabled" Height="16" HorizontalAlignment="Left" Name="checkBoxDisabled" VerticalAlignment="Center" Grid.Column="2" IsEnabled="False" />
+                </Grid>
             </Grid>
-        </Grid>
-        <StackPanel Height="288" Name="stackPanel2" VerticalAlignment="Top" Width="200" Margin="474,73,12,0">
-            <Button Content="Enabled" Height="23" Name="enabledButton" Width="75" HorizontalAlignment="Right" />
-            <Button Content="Disabled" Height="23" Name="disabledButton" Width="75" HorizontalAlignment="Right" IsEnabled="False" />
-            <ListBox Height="100" Name="FruitListBox">
-                <ListBoxItem Content="Apple" />
-                <ListBoxItem Content="Orange" />
-                <ListBoxItem Content="Mango" />
-            </ListBox>
-            <TreeView Height="83" Name="treeView">
-                <TreeViewItem Header="Parent One" />
-                <TreeViewItem Header="Parent Two" />
-            </TreeView>
+            <StackPanel  Name="stackPanel2">
+                <Button Content="Enabled" Height="23" Name="enabledButton" Width="75" HorizontalAlignment="Right" />
+                <Button Content="Disabled" Height="23" Name="disabledButton" Width="75" HorizontalAlignment="Right" IsEnabled="False" />
+                <ListBox Height="100" Name="FruitListBox">
+                    <ListBoxItem Content="Apple" />
+                    <ListBoxItem Content="Orange" />
+                    <ListBoxItem Content="Mango" />
+                </ListBox>
+                <TreeView Name="treeView" Width="150">
+                    <TreeViewItem Header="Parent One">
+                        <TreeViewItem Header="Child 1" />
+                        <TreeViewItem Header="Child 2">
+                            <TreeViewItem Header="Grandchild 1" />
+                        </TreeViewItem>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Parent Two" />
+                </TreeView>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
