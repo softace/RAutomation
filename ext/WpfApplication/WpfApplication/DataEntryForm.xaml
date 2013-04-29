@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApplication.DataEntryForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DataEntryForm" Height="297" Width="651">
+    <Grid>
+        <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" Name="closeDataEntryFormButton" VerticalAlignment="Top" Width="75" />
+        <GroupBox Header="List of items" Height="126" HorizontalAlignment="Left" Margin="141,41,0,0" Name="groupBox3" VerticalAlignment="Top" Width="354">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <ListView Grid.Column="0" HorizontalAlignment="Stretch" Name="personListView" VerticalAlignment="Stretch" />
+                <StackPanel Grid.Column="1" HorizontalAlignment="left" Name="stackPanel1" VerticalAlignment="Stretch" Width="auto">
+                    <Button Content="Button" Height="23" Name="button1" Width="75" />
+                    <Button Content="Button" Height="23" Name="button2" Width="75" />
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <Label Content="Phone number" Height="28" HorizontalAlignment="Left" Margin="130,183,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="224,185,0,0" Name="textBoxx" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="424,244,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</Window>
